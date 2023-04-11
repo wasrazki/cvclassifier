@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { GetCvsComponent } from './app/get-cvs/get-cvs.component';
 import { LoginComponent } from './app/login/login.component';
 import { UploadCvComponent } from './app/upload-cv/upload-cv.component';
+import { CreateaccountComponent } from './app/createaccount/createaccount.component';
+import { SecondinComponent } from './app/secondin/secondin.component';
+import { ResultatComponent } from './app/resultat/resultat.component';
 
 const routes: Routes = [
   {
@@ -17,6 +20,16 @@ const routes: Routes = [
     path: 'all/cv',
     component: GetCvsComponent
   },
+  { 
+    path: 'create',
+    component: CreateaccountComponent
+  },
+  {path: 'secondin',
+   component: SecondinComponent },
+   { 
+    path:'resultat',
+    component:ResultatComponent 
+  }
  
 ];
 @NgModule({
