@@ -28,8 +28,7 @@ const routes: Routes = [
    component: SecondinComponent },
    { 
     path:'resultat',
-    component:ResultatComponent 
-  }
+    component:ResultatComponent }
  
 ];
 @NgModule({
