@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { FormGroup,FormControl,Validators } from '@angular/forms';
 import { FlaskapiService } from 'src/app/flaskapi.service';
 import {Router} from '@angular/router';
@@ -10,28 +9,23 @@ import {Router} from '@angular/router';
   styleUrls: ['./get-cvs.component.scss']*/
 })
 export class GetCvsComponent implements OnInit {
+  cvs: any[] = [];
 
   constructor(private flaskApiService: FlaskapiService, private router:Router) { }
 
   ngOnInit(): void {
+    this.fetchCVs(); // Fetch CV data when the component initializes
   }
-  /*public getCvs(){
-    this.flaskApiService.getCvs();
-    
-  }*/
-=======
 
-@Component({
-  selector: 'app-get-cvs',
-  templateUrl: './get-cvs.component.html',
-  styleUrls: ['./get-cvs.component.scss']
-})
-export class GetCvsComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  fetchCVs(): void {
+    this.flaskApiService.getCVs().subscribe({
+      next: (response: any[]) => {
+        this.cvs = response; // Assign the fetched CV data to the 'cvs' property
+      },
+      error: (error: any) => {
+        console.log(error);
+      }
+    });
   }
->>>>>>> 68dec48bb2e871b607a923652d5f106cba437150
 
 }

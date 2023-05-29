@@ -37,8 +37,17 @@ export class UploadCvComponent implements OnInit {
       this.flaskApiService.uploadCv(formData).subscribe({
         next: (response: any) => {
           console.log('File uploaded successfully!');
-          this.router.navigate(['/resultat'], { queryParams: { prediction: response.prediction } });
-        },
+          // Save CV information in the database
+          /*this.flaskApiService.saveCVInfo(this.selectedFile.name, response.prediction).subscribe({
+              next: () => {
+                  console.log('CV information saved successfully!');
+                  this.router.navigate(['/resultat'], { queryParams: { prediction: response.prediction } });
+              },
+              error: (error: any) => {
+                  console.error('Error saving CV information:', error);
+              }
+          });*/
+      },
         error: (error: any) => {
           console.error('Error uploading file:', error);
         }

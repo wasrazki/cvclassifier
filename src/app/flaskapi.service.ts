@@ -21,4 +21,10 @@ export class FlaskapiService {
 
     return this.httpClient.post<any>(`${this.server}resultat`, formData);
   }
+
+  getCVs(): Observable<any[]> {
+    return this.httpClient.get<any[]>('http://localhost:3000/all/cv');
+  }
+
+
 }

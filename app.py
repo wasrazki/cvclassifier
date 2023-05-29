@@ -4,9 +4,18 @@ import PyPDF2
 import pickle
 from flask import jsonify
 from flask_cors import CORS
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 #-----------------------------------------------------------------------------------------
 app = Flask(__name__)
 cors = CORS(app)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cv.db'  
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
+class CV(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(255))
+    category = db.Column(db.String(255))
 #-----------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------
 @app.route('/resultat',methods=['POST'])
@@ -41,11 +50,22 @@ def predict():
             predicted_idx = model.predict(text_feature)[0]
             predicted_label=model.correspondance.loc[predicted_idx][0]
             print(predicted_label)
-
+            nom=cvfile.filename.split(".pdf")[0]
+            cv = CV(name=nom, category=predicted_label)
+            db.session.add(cv)
+            db.session.commit()
             return jsonify({'prediction': predicted_label})
     else:
         # Handle the case when the method is not POST
         return jsonify({'error': 'Method Not Allowed'})
+    
+
+
+@app.route('/all/cv', methods=['GET'])
+def get_all_cvs():
+    cvs = CV.query.all()
+    cv_data = [{'id': cv.id, 'name': cv.name, 'category': cv.category} for cv in cvs]
+    return jsonify(cv_data)
 
 #-----------------------------------------------------------------------------------------
 
