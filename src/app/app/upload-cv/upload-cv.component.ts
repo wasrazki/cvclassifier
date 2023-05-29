@@ -1,17 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
-<<<<<<< HEAD
 import { FlaskapiService } from 'src/app/flaskapi.service';
 import {Router} from '@angular/router';
-=======
->>>>>>> 68dec48bb2e871b607a923652d5f106cba437150
 @Component({
   selector: 'app-upload-cv',
   templateUrl: './upload-cv.component.html',
   styleUrls: ['./upload-cv.component.scss']
 })
 export class UploadCvComponent implements OnInit {
-<<<<<<< HEAD
   selectedFile!: File ;
   constructor(private flaskApiService: FlaskapiService, private router:Router) { }
 
@@ -53,12 +49,3 @@ export class UploadCvComponent implements OnInit {
   
   
   }
-=======
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
->>>>>>> 68dec48bb2e871b607a923652d5f106cba437150
