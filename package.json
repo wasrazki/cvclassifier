@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 
   "name": "ppp",
 
@@ -106,3 +107,62 @@
 
 }
 
+=======
+<<<<<<< HEAD
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+=======
+  "name": "ppp",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^14.2.0",
+    "@angular/cdk": "^14.2.0",
+    "@angular/common": "^14.2.0",
+    "@angular/compiler": "^14.2.0",
+    "@angular/core": "^14.2.0",
+    "@angular/elements": "^14.2.0",
+    "@angular/forms": "^14.2.0",
+    "@angular/google-maps": "^14.2.0",
+    "@angular/localize": "^14.2.0",
+    "@angular/material": "^14.2.0",
+    "@angular/platform-browser": "^14.2.0",
+    "@angular/platform-browser-dynamic": "^14.2.0",
+    "@angular/router": "^14.2.0",
+    "@ng-bootstrap/ng-bootstrap": "12.0.1",
+    "@popperjs/core": "^2.11.4",
+    "bootstrap": "4.6.1",
+    "chart.js": "2.9.4",
+    "clipboard": "2.0.10",
+    "ngx-clipboard": "15.0.1",
+    "ngx-toastr": "14.2.2",
+    "nouislider": "15.5.1",
+    "pe7-icon": "^1.0.4",
+    "rxjs": "~7.5.0",
+    "web-animations-js": "2.3.2",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.2.10",
+    "@angular/cli": "~14.2.10",
+    "@angular/compiler-cli": "^14.2.0",
+    "@types/jasmine": "~4.0.0",
+    "jasmine-core": "~4.3.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "sass": "^1.32.13",
+    "typescript": "~4.7.2"
+>>>>>>> origin/main
+  }
+}
+>>>>>>> 68dec48bb2e871b607a923652d5f106cba437150

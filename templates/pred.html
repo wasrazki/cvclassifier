@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+  <head>
+    <title>First App Using Flask</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+
+  </head>
+  <body>
+    <br>
+    <h1 class="text-center">Resumes Classifier</h1>
+    <br><br>
+    {% if prediction %}
+        <div class="text-center alert alert-danger">
+            <strong>The category of the uploaded resume is {{prediction}}</strong>
+        </div>
+    {% endif %}
+    <br><br>
+    <div class="text-center">
+        <a class="text-center alert alert-warning" href="/">Select a new resume</a>
+    </div>
+  </body>
+</html>

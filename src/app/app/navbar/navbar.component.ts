@@ -5,8 +5,13 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
+<<<<<<< HEAD
   templateUrl: './navbar.component.html'/*,
   styleUrls: ['./navbar.component.scss']*/
+=======
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss']
+>>>>>>> 68dec48bb2e871b607a923652d5f106cba437150
 })
 export class NavbarComponent implements OnInit {
   public focus!:any;

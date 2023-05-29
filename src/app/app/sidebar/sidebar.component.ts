@@ -15,8 +15,13 @@ export const ROUTES: RouteInfo[] = [
 
 @Component({
   selector: 'app-sidebar',
+<<<<<<< HEAD
   templateUrl: './sidebar.component.html'/*,
   styleUrls: ['./sidebar.component.scss']*/
+=======
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.scss']
+>>>>>>> 68dec48bb2e871b607a923652d5f106cba437150
 })
 export class SidebarComponent implements OnInit {
 
